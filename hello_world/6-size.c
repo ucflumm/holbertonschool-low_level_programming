@@ -9,11 +9,14 @@
  */
 int main(void)
 {
+/** function main -:
+* prints the byte size of the selected types line by line 
+*/
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
-        printf("Size of a int: %d byte(s)\n", sizeof(int));
-        printf("Size of a long int: %d byte(s)\n", sizeof(long));
-        printf("Size of a long long int: %d byte(s)\n", sizeof(long long));
-        printf("Size of a float: %d byte(s)\n", sizeof(float));
+	printf("Size of an int: %d byte(s)\n", sizeof(int));
+	printf("Size of a long int: %d byte(s)\n", sizeof(long));
+	printf("Size of a long long int: %d byte(s)\n", sizeof(long long));
+	printf("Size of a float: %d byte(s)\n", sizeof(float));
 
 	return (0);
 }
