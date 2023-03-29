@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 /**
- * 6-size - accepts no arguments
- * main - prints the size of various types on the computer
- * it is compiled and run on
+ * main - Prints the size of various c types on current system.
  *
  * Return: Always 0 (Success)
  */
