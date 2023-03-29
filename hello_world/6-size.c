@@ -2,16 +2,12 @@
 
 /**
  * 6-size - accepts no arguments
- *  - prints the size of various types on the computer
+ * main - prints the size of various types on the computer
  * it is compiled and run on
  *
  * Return: Always 0 (Success)
  */
-/** function main - Type size calculator for C
-* prints the byte size of the selected types line by line
-*
-* Return: 0 if successful
-*/
+
 int main(void)
 {
 
