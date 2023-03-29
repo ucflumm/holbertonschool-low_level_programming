@@ -7,11 +7,14 @@
  *
  * Return: Always 0 (Success)
  */
+/** function main - Type size calculator for C
+* prints the byte size of the selected types line by line
+*
+* Return: 0 if successful
+*/
 int main(void)
 {
-/** function main -:
-* prints the byte size of the selected types line by line 
-*/
+
 	printf("Size of a char: %d byte(s)\n", sizeof(char));
 	printf("Size of an int: %d byte(s)\n", sizeof(int));
 	printf("Size of a long int: %d byte(s)\n", sizeof(long));
