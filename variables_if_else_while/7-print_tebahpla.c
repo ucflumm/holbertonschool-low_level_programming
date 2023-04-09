@@ -13,10 +13,7 @@ int main(void)
 	int i = 0;
 
 	for (i = ASCII_LOWER_Z; i >= ASCII_LOWER_A; i--)
-	{
-		if (i != 101 && i != 113)
-			putchar(i);
-	}
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
