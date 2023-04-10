@@ -3,5 +3,6 @@
 
 
 /* FUNCTION PROTOTYPE */
+void print_alphabet(void);
 extern int _putchar(char c);
 #endif
