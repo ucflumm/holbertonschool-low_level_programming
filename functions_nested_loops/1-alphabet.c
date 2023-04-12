@@ -1,6 +1,8 @@
 /**
 * print_alphabet - prints the alphabet
 **/
+#include main.h
+
 #define ASCII_LOWER_A 97
 #define ASCII_LOWER_Z 122
 
