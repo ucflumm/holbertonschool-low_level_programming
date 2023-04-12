@@ -13,4 +13,5 @@ extern int _abs(int i);
 extern int print_last_digit(int i);
 extern void jack_bauer(void);
 extern void times_table(void);
+extern int add(int a, int b);
 #endif
