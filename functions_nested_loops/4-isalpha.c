@@ -12,15 +12,12 @@
 
 int _isalpha(int c)
 {
-	
 	if (c >= ASCII_LOWER_A && c <= ASCII_LOWER_Z)
 		return (1);
-	
 	if (c >= ASCII_UPPER_A && c <= ASCII_UPPER_Z)
 		return (1);
-	
 	if (c >= ASCII_DIGIT_0 && c <= ASCII_DIGIT_9)
 		return (1);
-		
-	return(0);
+
+	return (0);
 }
