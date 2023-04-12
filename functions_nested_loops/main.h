@@ -12,4 +12,5 @@ extern int print_sign(int n);
 extern int _abs(int i);
 extern int print_last_digit(int i);
 extern void jack_bauer(void);
+extern void times_tables(void);
 #endif
