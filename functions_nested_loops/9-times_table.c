@@ -18,7 +18,7 @@ void times_table(void)
 		{
 			result = i * j;
 			sprintf(int_str, "%d", result);
-			if (int_str[1] == 0)
+			if (int_str[1] == 0 && j != 0)
 				_putchar (' ');
 			_putchar (int_str[0]);
 			if (int_str[1] != 0)
