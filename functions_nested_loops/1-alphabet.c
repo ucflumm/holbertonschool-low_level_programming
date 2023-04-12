@@ -1,6 +1,8 @@
 /**
 * print_alphabet - prints the alphabet
 **/
+#define ASCII_LOWER_A 97
+#define ASCII_LOWER_Z 122
 
 void print_alphabet(void)
 {
