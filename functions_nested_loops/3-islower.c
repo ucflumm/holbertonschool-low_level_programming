@@ -1,5 +1,5 @@
 /**
-* islower - checks if char is lowercase
+* _islower - checks if char is lowercase
 **/
 #include "main.h"
 
@@ -8,11 +8,11 @@
 
 int _islower(int c)
 {
-	
+
 	if (c >= ASCII_LOWER_A && c <= ASCII_LOWER_Z)
 	{
-		return(1);
+		return (1);
 	}
-	
-	return(0);
+
+	return (0);
 }
