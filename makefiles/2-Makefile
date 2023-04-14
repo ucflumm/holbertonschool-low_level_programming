@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+LDFLAGS =
+#SRC = main.c school.c
+OBJ = main.o school.o
+
+NAME = school
+
+all: $(NAME)
+
+$(NAME) : $(OBJ)
+
+main.o : main.c m.h
+school.o : school.c m.h
