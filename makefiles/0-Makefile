@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+LDFLAGS =
+CFILES = main.c school.c
+
+TARGET = school
+
+all: $(TARGET)
+
+$(TARGET): $(OBJFILES)
+	$(CC) $(CFLAGS) -o $(TARGET) $(CFILES) $(LDFLAGS)
