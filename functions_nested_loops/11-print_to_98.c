@@ -9,12 +9,12 @@ void print_to_98(int n)
 {
 	int tmp, i;
 	char int2str[13] = {0};
-	
+
 	if (n < 98)
 	{
 		for (i = n; i < 98; i++)
 		{
-			sprintf(int2str, "%d ,", i);
+			sprintf(int2str, "%d, ", i);
 			for (tmp = 0; tmp < 6; tmp++)
 			{
 				if (int2str[tmp] != '\0')
@@ -29,7 +29,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i > 98; i--)
 		{
-			sprintf(int2str, "%d ,", i);
+			sprintf(int2str, "%d, ", i);
 			for (tmp = 0; tmp < 6; tmp++)
 			{
 				if (int2str[tmp] != '\0')
