@@ -5,7 +5,8 @@
 #define ASCII_UPPER_Z 90
 /**
  * _isupper - returns 1 if upper 0 if lower
- * Return: 0 if lower 1 if upper
+ * @c: number?
+ *Return: 0 if lower 1 if upper
  **/
 
 int _isupper(int c)
