@@ -3,7 +3,7 @@ OPT=-O0
 CFLAGS=-Wall -Wextra 
 
 SRC=main.c school.c
-OBJ=main.o school.o
+OBJ=$(patsubst %.c,%.o,$(SRC))
 
 NAME=school
 BINARY=$(NAME)
