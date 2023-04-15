@@ -10,6 +10,7 @@
 void print_square(int n)
 {
 	int i, c;
+
 	if (n <= 0)
 	{
 		_putchar ('\n');
@@ -24,5 +25,5 @@ void print_square(int n)
 			}
 			_putchar ('\n');
 		}
-	}	
+	}
 }
