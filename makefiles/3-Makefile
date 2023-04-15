@@ -1,0 +1,33 @@
+CC=gcc
+OPT=-O0
+CFLAGS=-Wall -Wextra 
+RM=rm -r
+SRC=main.c school.c
+OBJ=$(patsubst %.c,%.o,$(SRC))
+
+NAME=school
+BINARY=$(NAME)
+
+all: $(BINARY)
+
+$(BINARY): $(OBJ)
+	$(CC) -o $@ $^
+
+# regular expression where % is a wildcard
+%.o:%.c
+	$(CC) $(CFLAGS) -c -o $@ $^
+
+.PHONY: fclean
+fclean:
+	rm -rf $(BINARY) $(OBJ) *~  
+.PHONY: oclean
+oclean:
+	rm -rf $(OBJ)
+.PHONY: clean
+clean:
+	rm -rf *~
+
+.PHONY: re
+re:
+	$(MAKE) -f 3-Makefile fclean
+	$(MAKE) -f 3-Makefile all
