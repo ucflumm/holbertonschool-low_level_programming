@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - checks if int is a digit
+ * print_triangle - checks if int is a digit
  * @n: number to check
  * Return: 1 if digit 0 if not
  *
