@@ -1,98 +1,43 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_to_98 - prints all natural numbers to 98
  * @n: something
 */
-#define PRINT_TO_98 98
 
 void print_to_98(int n)
 {
-	int tmp;
-
-	if (n == PRINT_TO_98)
+	int tmp, i;
+	char int2str[13] = {0};
+	
+	if (n < 98)
 	{
-		_putchar('9');
-		_putchar('8');
-		_putchar('\n');
+		for (i = n; i <= 98; i++)
+		{
+			sprintf(int2str, "%d ", i);
+			for (tmp = 0; tmp < 6; tmp++)
+			{
+				if (int2str[tmp] != '\0')
+					_putchar (int2str[tmp]);
+			}
+		}
+		_putchar ('\n');
+	}
+	else if (n > 98)
+	{
+		for (i = n; i >= 98; i--)
+		{
+			sprintf(int2str, "%d ", i);
+			for (tmp = 0; tmp < 6; tmp++)
+			{
+				if (int2str[tmp] != '\0')
+					_putchar (int2str[tmp]);
+			}
+		}
+		_putchar ('\n');
 	}
 	else
 	{
-		while (n != PRINT_TO_98)
-		{
-			if (n < PRINT_TO_98)
-			{
-				if (n == 0)
-				{
-					_putchar ('0');
-					_putchar (',');
-					_putchar (' ');
-					n++;
-				}
-				else if (n == -10)
-				{
-					_putchar ('-');
-					_putchar ('1');
-					_putchar ('0');
-					_putchar (',');
-					_putchar (' ');
-					n++;
-				}
-				else if (n < 0)
-				{
-					_putchar('-');
-					tmp = n * -1;
-					_putchar (tmp + '0');
-					_putchar (',');
-					_putchar (' ');
-					n++;
-				}
-				else if (n < 10)
-				{
-					_putchar (n + '0');
-					_putchar (',');
-					_putchar (' ');
-					n++;
-				}
-				else if (n > 9)
-				{
-					tmp = n / 10;
-					_putchar (tmp + '0');
-					tmp = n % 10;
-					_putchar (tmp + '0');
-					_putchar (',');
-					_putchar (' ');
-					n++;
-				}
-			}
-			else if (n > PRINT_TO_98)
-			{
-				if (n > 99)
-				{
-					tmp = n / 100;
-					_putchar (tmp + '0');
-					tmp = n / 10;
-					tmp = tmp % 10;
-					_putchar (tmp + '0');
-					tmp = n % 10;
-					_putchar (tmp + '0');
-					_putchar (',');
-					_putchar (' ');
-					n--;
-				}
-				else
-				{
-					tmp = n / 10;
-					_putchar (tmp + '0');
-					tmp = n % 10;
-					_putchar (tmp + '0');
-					_putchar (',');
-					_putchar (' ');
-					n--;
-				}
-			}
-
-		}
 		_putchar ('9');
 		_putchar ('8');
 		_putchar ('\n');
