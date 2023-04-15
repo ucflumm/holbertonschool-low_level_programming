@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+LDFLAGS =
+SRC = $(wildcard $(SRC)/*.c)
+OBJ = "%.
+DEPS = m.h
+
+NAME = school
+
+all: $(NAME)
+
+$(NAME) : $(OBJ)
+	
+$(OBJ) : $(SRC) $DEPS
+	$(CC) -c -o $@ $< $(CFLAGS)
