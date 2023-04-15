@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - checks if int is a digit
+ * print_diagonal - checks if int is a digit
  * @n: number to check
  * Return: 1 if digit 0 if not
  *
@@ -10,6 +10,7 @@
 void print_diagonal(int n)
 {
 	int i, m;
+
 	if (n <= 0)
 	{
 		_putchar ('\n');
@@ -25,5 +26,5 @@ void print_diagonal(int n)
 			_putchar ('\\');
 			_putchar ('\n');
 		}
-	}	
+	}
 }
