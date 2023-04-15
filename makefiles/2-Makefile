@@ -1,7 +1,7 @@
 CC=gcc
 OPT=-O0
 CFLAGS=-Wall -Wextra 
-
+RM=rm -r
 SRC=main.c school.c
 OBJ=$(patsubst %.c,%.o,$(SRC))
 
@@ -17,5 +17,15 @@ $(BINARY): $(OBJ)
 %.o:%.c
 	$(CC) $(CFLAGS) -c -o $@ $^
 
+.PHONY: fclean
+fclean:
+	rm -rf $(BINARY) $(OBJ) *~  
+.PHONY: oclean
+oclean:
+	rm -rf $(OBJ)
+.PHONY: clean
 clean:
-	rm -rf $(BINARY) $(OBJECTS)
+	rm -rf *~
+
+re: fclean
+	$(MAKE)
