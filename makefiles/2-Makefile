@@ -1,8 +1,9 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
 LDFLAGS =
-#SRC = main.c school.c
+SRC = main.c school.c
 OBJ = main.o school.o
+DEPS = m.h
 
 NAME = school
 
@@ -10,5 +11,5 @@ all: $(NAME)
 
 $(NAME) : $(OBJ)
 
-main.o : main.c m.h
-school.o : school.c m.h
+%.o : %.c $DEPS
+	$(CC) -c -o $@ $< $(CFLAGS)
