@@ -12,7 +12,7 @@ void print_to_98(int n)
 	
 	if (n < 98)
 	{
-		for (i = n; i <= 98; i++)
+		for (i = n; i < 98; i++)
 		{
 			sprintf(int2str, "%d ", i);
 			for (tmp = 0; tmp < 6; tmp++)
@@ -21,11 +21,13 @@ void print_to_98(int n)
 					_putchar (int2str[tmp]);
 			}
 		}
+		_putchar ('9');
+		_putchar ('8');
 		_putchar ('\n');
 	}
 	else if (n > 98)
 	{
-		for (i = n; i >= 98; i--)
+		for (i = n; i > 98; i--)
 		{
 			sprintf(int2str, "%d ", i);
 			for (tmp = 0; tmp < 6; tmp++)
@@ -34,6 +36,8 @@ void print_to_98(int n)
 					_putchar (int2str[tmp]);
 			}
 		}
+		_putchar ('9');
+		_putchar ('8');
 		_putchar ('\n');
 	}
 	else
