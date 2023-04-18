@@ -43,7 +43,8 @@ n = 0;
 ```
 (*p)++;
 ```
-##### printing pointers
+##### printing pointers address
 ```
-
+int a;
+printf("&a   = %p\n", (void *) &a);
 ```
