@@ -48,3 +48,16 @@ n = 0;
 int a;
 printf("&a   = %p\n", (void *) &a);
 ```
+##### swapping two integers - helpful pointer example
+
+```
+void swap_int(int *a, int *b)
+{
+	int tmp;
+	
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+	
+}
+```
