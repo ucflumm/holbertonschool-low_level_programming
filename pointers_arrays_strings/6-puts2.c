@@ -12,6 +12,7 @@ void puts2(char *str)
 	int i, str_length;
 
 	str_length = (strlen(str) / 2);
+	str_length++;
 	for (i = 0; i <= str_length; i++)
 	{
 		_putchar (*str);
