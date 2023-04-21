@@ -14,8 +14,8 @@ void puts2(char *str)
 	str_length = strlen(str);
 		if (str_length % 2 == 0)
 		{
-			str_length = str_length / 2;
 			str_length++;
+			str_length = str_length / 2;
 		}
 		else
 		{
