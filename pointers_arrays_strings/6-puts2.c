@@ -22,7 +22,7 @@ void puts2(char *str)
 			str_length = str_length / 2;
 		}
 	/* printf("Str length = %d \n", str_length); */
-	for (i = 0; i <= str_length; i++)
+	for (i = 0; i < str_length; i++)
 	{
 		_putchar (*str);
 		str += 2;
