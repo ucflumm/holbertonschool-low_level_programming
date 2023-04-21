@@ -13,7 +13,6 @@ void print_rev(char *s)
 
 	str_length = strlen(s);
 	str_length--;
-	printf("String length is %d \n", str_length);
 	s = s + str_length;
 
 	for (i = str_length; i >= 0; i--)
