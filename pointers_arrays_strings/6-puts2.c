@@ -12,7 +12,7 @@ void puts2(char *str)
 	int i, str_length;
 
 	str_length = strlen(str);
-		if (str_length % 2 != 0)
+		if (str_length % 2 == 0)
 		{
 			str_length = str_length / 2;
 			str_length++;
