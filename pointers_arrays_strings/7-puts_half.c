@@ -1,10 +1,10 @@
 #include "main.h"
 
-/** 
+/**
  * puts_half - puts half a string followed by a newline
  * @str: string to put half
- * 
- * 
+ *
+ *
 */
 
 void puts_half(char *str)
@@ -24,4 +24,5 @@ void puts_half(char *str)
 		_putchar (*str);
 		str++;
 	}
+
 }
