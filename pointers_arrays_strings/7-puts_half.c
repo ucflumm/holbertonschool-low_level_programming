@@ -14,6 +14,7 @@ void puts_half(char *str)
 	str_length = strlen(str);
 	if (str_length % 2 != 0)
 	{
+		printf("this string passed through this block %c\n"n *str);
 		str_length--;
 	}
 	str_length = str_length / 2;
