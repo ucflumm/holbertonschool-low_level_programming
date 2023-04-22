@@ -15,7 +15,6 @@ void puts_half(char *str)
 
 	if (str_length % 2 != 0)
 	{
-		printf("this string passed through this block %c \n", *str);
 		str_length++;
 	}
 
