@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 		src++;
 	}
 	src--;
-	if (src != '\0')
+	if (*src != '\0')
 		*dest = '\0';
 	return (rtn);
 }
