@@ -18,10 +18,8 @@ void reverse_array(int *a, int n)
 		tmparray[p] = a[i];
 		i--;
 		p++;
-		printf("tmp array %d\n", tmparray[p]);
 	}
 	
-	printf("tmp array 0 = %d\n", *tmparray);
 	i = n;
 	p = 0;
 	while (i > 0)
