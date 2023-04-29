@@ -1,26 +1,22 @@
 #include "main.h"
-
-/**
- * reverse_array - reverses array
+#include <stdlib.h>
+/** 
+ * reverse_array - reverses array 
  * @a: pointer to someting
  * @n: sizeof array??
- *
+ * 
 */
 
 void reverse_array(int *a, int n)
 {
-	const unsigned int array_size = n;
-	int tmp[array_size];
-	*tmp = 0;
-	int i, p;
-
-	i = n;
-	p = 0;
+	int *tmparray = malloc(n * sizeof(int));
+	int i = n;
+	int p = 0;
+	
 	while (i > 0)
 	{
-		tmp[p] = a[i];
+		tmparray[p] = a[i];
 		i--;
 		p++;
 	}
-
 }
