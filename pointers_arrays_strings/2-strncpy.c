@@ -10,9 +10,10 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, cnt;
+	int i, cnt, positive;
 	char *rtn_string;
-
+	
+	positive = 0;
 	rtn_string = dest;
 	if (*src == '\0')
 	{
@@ -27,27 +28,24 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	else
 	{
+		for (i = 0; i < n; i++)
 		{
-			for (i = 0; i < n; i++)
+			if (positive == 1)
 			{
+				*dest = '\0';
+				src++;
+				dest++;
+			}
+			else
+			{
+				*dest = *src;
+				dest++;
+				src++;
 				if (*src == '\0')
-				{
-					for (cnt = i; i < n; cnt++)
-					{
-						*dest = '\0';
-						src++;
-						dest++;
-					}
-					return (rtn_string);
-				}
-				else
-				{
-					*dest = *src;
-					dest++;
-					src++;
-				}
+					positive = 1;
 			}
 		}
+		
 	}
 	return (rtn_string);
 
