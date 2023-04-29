@@ -27,21 +27,28 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	else
 	{
-		for (i = 0; i < n; i++)
 		{
-			*dest = *src;
-			dest++;
-			src++;
+			for (i = 0; i < n; i++)
+			{
+				if (*src == '\0')
+				{
+					for (cnt = i; i < n; cnt++)
+					{
+						*dest = '\0';
+						src++;
+						dest++;
+					}
+					return (rtn_string);
+				}
+				else
+				{
+					*dest = *src;
+					dest++;
+					src++;
+				}
+			}
 		}
 	}
-	/**
-	*	while (*src != '\0')
-	*	{
-	*		*dest = *src;
-	*		dest++;
-	*		src++;
-	*	}
-	*/
 	return (rtn_string);
 
 }
