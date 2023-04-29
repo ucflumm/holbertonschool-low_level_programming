@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - copies a string 
+ * _strncpy - copies a string
  * @dest: destination pointer
  * @src: source poinnter
  * @n: how much to copy
@@ -12,7 +12,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i, cnt, positive;
 	char *rtn_string;
-	
+
 	positive = 0;
 	rtn_string = dest;
 	if (*src == '\0')
@@ -45,7 +45,7 @@ char *_strncpy(char *dest, char *src, int n)
 					positive = 1;
 			}
 		}
-		
+
 	}
 	return (rtn_string);
 
