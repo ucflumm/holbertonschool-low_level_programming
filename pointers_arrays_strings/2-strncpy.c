@@ -16,12 +16,13 @@ char *_strncpy(char *dest, char *src, int n)
 	rtn_string = dest;
 	if (*src == '\0')
 	{
-		for (cnt = 0; cnt < n; cnt++)
+		cnt = n;
+		while (cnt != 0)
 		{
-			*dest = *src;
-			dest++;
+			*dest = '\0';
 			src++;
-			src = '\0';
+			dest++;
+			cnt--;
 		}
 	}
 	else
