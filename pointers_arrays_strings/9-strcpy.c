@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+#include <string.h>
 
 /** 
  * _strcpy - copies a string
@@ -9,16 +11,5 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	char *ptr = dest;
-
-	while (*src != '\0')
-	{
-		if (*src != '\0')
-		{
-			*dest = *src;
-			dest++;
-			src++;
-		}
-	}
-	return (ptr);
+	return memcpy (dest, src, strlen (src) + 1);
 }
