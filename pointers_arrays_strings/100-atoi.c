@@ -32,7 +32,7 @@ int _atoi(char *s)
 		s++;
 	}
 	
-	if (neg % 2 != 0)
+	if (neg % 2 != 0 && neg != 0)
 		n *= -1;		
 	
 	return (n);
