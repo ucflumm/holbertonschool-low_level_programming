@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_chessboard - prints chessboard 
+ * print_chessboard - prints chessboard
  * @a: pointer to array
- * 
+ *
 */
 
 void print_chessboard(char (*a)[8])
@@ -15,7 +15,7 @@ void print_chessboard(char (*a)[8])
 	{
 		for (i = 0; i < 8; i++)
 		{
-				_putchar(a[n][i]);
+			_putchar(a[n][i]);
 		}
 		_putchar('\n');
 		n++;
