@@ -22,6 +22,7 @@ char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *p1, char *p2);
 void reverse_array(int *a, int n);
+void print_chessboard(char (*a)[8]);
 
 
 char *_memset(char *s, char b, unsigned int n);
