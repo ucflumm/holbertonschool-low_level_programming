@@ -45,6 +45,11 @@ char *cap_string(char *str)
 				str++;
 		}
 		else
+		if (isalnum(*str))
+		{
+			while (isalnum(*str))
+				str++;
+		}
 		str++;
 	}
 	return (rtn_tmp);
