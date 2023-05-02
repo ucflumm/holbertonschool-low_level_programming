@@ -27,29 +27,30 @@ char *cap_string(char *str)
 	{	
 		if (isupper(*str))
 		{
-			while (isalpha(*str))
+			while (isalpha(*str) || *str == '-')
 				str++;
 		}
 		else
 		if (islower(*str))
 		{
 			*str -= CASE_SHIFT;
-			while (isalpha(*str))
+			while (isalpha(*str) || *str == '-')
 				str++;
 		}
 		else
 		if (*str == '-')
 		{
 			str++;
-			while (isalpha(*str))
+			while (isalpha(*str) || *str == '-')
 				str++;
 		}
 		else
 		if (isalnum(*str))
 		{
-			while (isalnum(*str))
+			while (isalnum(*str) || *str == '-')
 				str++;
 		}
+		else
 		str++;
 	}
 	return (rtn_tmp);
