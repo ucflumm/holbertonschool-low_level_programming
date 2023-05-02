@@ -17,12 +17,6 @@ char *cap_string(char *str)
 	char *rtn_tmp;
 
 	rtn_tmp = str;
-	if (islower(*str))
-	{
-		*str -= CASE_SHIFT;
-		while (isalpha(*str))
-			str++;
-	}
 	while (*str != '\0')
 	{	
 		if (isupper(*str))
