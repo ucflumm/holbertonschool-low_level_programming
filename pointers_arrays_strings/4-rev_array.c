@@ -13,6 +13,7 @@ void reverse_array(int *a, int n)
 	int i = n - 1;
 	int p = 0;
 	
+	printf("the first number is :%d\n", a[i]);
 	while (i > 0)
 	{
 		tmparray[p] = a[i];
