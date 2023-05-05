@@ -11,7 +11,7 @@
 
 int _atoi(char *s)
 {
-	int n = 0;
+	unsigned int n = 0;
 	int neg = 0;
 
 	while (*s < 48 || *s > 57)
@@ -33,7 +33,10 @@ int _atoi(char *s)
 	}
 
 	if (neg % 2 != 0 && n != 0)
-		n *= -1;
+		neg = -1;
+	else
+	if (n != 0)
+		neg = 1;
 
-	return (n);
+	return (n * neg);
 }
