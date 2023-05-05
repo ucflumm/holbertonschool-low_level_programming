@@ -2,10 +2,10 @@
 #include <string.h>
 #define M_ENCODE_LEN 10
 /**
- * leet - encode string to leet 
+ * leet - encode string to leet
  * @str: string to encode
  * Return: pointer to string
- * 
+ *
 */
 char *leet(char *str)
 {
@@ -16,7 +16,7 @@ char *leet(char *str)
 	};
 	int n;
 
-	
+
 	while (*str != '\0')
 	{
 		for (n = 0; n < M_ENCODE_LEN; n++)
