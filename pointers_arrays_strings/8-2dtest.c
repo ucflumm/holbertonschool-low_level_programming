@@ -10,26 +10,30 @@
 void print_diagsums(int *a, int size)
 {
 	int n;
-	int count = 0;
-	int visual = 0;
-	int *ptr;
+	int *ptr, *ptr2;
+	unsigned int count = 0;
+	/*int count = 0;*/
+	ptr = a;
 
 	for (n = 0; n < size; n++)
 	{
-		ptr = a;
-		printf("src element = %d \n", *ptr);
+		printf("1pointer is %d \n", *ptr);
 		count += *ptr;
 		ptr++;
-		if ((size * n) != 0)	
-		{
-			visual = size * n;
-			printf("visual = %d\n", visual);
-			ptr += visual;
-		}
-		else
-			ptr += size;
-		printf("n = %d \n", n);
+		ptr += size;
+	}
+
+	ptr2 = a;
+	printf("ptr 2 equals %d\n", ptr2[0]);
+	ptr2 += ((sizeof(int) * (size - 1)));
+	count = 0;
+	printf("ptr 2 equals %d\n", ptr2[0]);
+	for (n = 0; n < size; n++)
+	{
+		printf("2pointer is %d \n", *ptr2);
+		count += *ptr2;
+		ptr2++;
+		ptr2 -= size;
 		
-		printf("count = %d \n", count);
 	}
 }
