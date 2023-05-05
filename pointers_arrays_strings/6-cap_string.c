@@ -9,16 +9,16 @@
  * cap_string - capitalizes a string
  * @str: string to capitalize
  * Return: string.
- * 
+ *
 */
 
 char *cap_string(char *str)
-{	
+{
 	char *rtn_tmp;
 
 	rtn_tmp = str;
 	while (*str != '\0')
-	{	
+	{
 		if (isupper(*str))
 		{
 			while (isalpha(*str) || *str == '-')
