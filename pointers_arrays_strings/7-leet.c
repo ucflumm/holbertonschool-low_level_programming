@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#define M_ENCODE_LEN 10
 /**
  * leet - encode string to leet 
  * @str: string to encode
@@ -8,30 +9,25 @@
 */
 char *leet(char *str)
 {
-	char *rtn_tmp, *ret, *origin, *casecheck;
-	int counter = 0;
-	int len;
-	char leet_complete[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	char leet_arr_a[] = {'a', 'A'};
-	char leet_a = '4';
-	char leet_arr_e[] = {'e', 'E'};
-	char leet_e = '3';	
-	char leet_arr_o[] = {'o', 'O'};
-	char leet_o = '0';
-	char leet_arr_t[] = {'t', 'T'};
-	char leet_t = '7';
-	char leet_arr_l[] = {'l', 'L'};
-	char leet_l = '1';
+	char * const rtn_tmp = str;
+	char matrix_encode[M_ENCODE_LEN][M_ENCODE_LEN] = {
+		{'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'},
+		{'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'}
+	};
+	int n, len;
 
-	rtn_tmp = str;
-	origin = str;
-	len = strlen(str);
-	while (strpbrk(str, leet_complete))
+	
+	while (*str != '\0')
 	{
-		for (counter = 0; counter < len; counter ++)
+		for (n = 0; n < M_ENCODE_LEN; n++)
 		{
-			
+			if (*str == matrix_encode[0][n])
+			{
+				*str = matrix_encode[1][n];
+				n = M_ENCODE_LEN;
+			}
 		}
+		str++;
 	}
 	return (rtn_tmp);
 }
