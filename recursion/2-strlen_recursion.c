@@ -2,9 +2,9 @@
 
 /**
  * _strlen_recursion -  Write a function that returns the length of a string.
- * @n: 
- * Return: 
- * 
+ * @s: string to count
+ * Return: current count
+ *
 */
 
 int _strlen_recursion(char *s)
