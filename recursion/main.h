@@ -14,5 +14,6 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int findSqrt(int n, int start, int end);
+int is_prime_helper(int num, int divisor);
 
 #endif
