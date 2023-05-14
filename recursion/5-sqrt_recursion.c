@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 }
 int findSqrt(int n, int start, int end)
 {
-	int mid = (start + end) / 2;
+	double mid = (start + end) / 2;
 	
 	if (start > end)
 		return (-1);
