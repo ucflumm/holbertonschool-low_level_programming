@@ -16,6 +16,6 @@ int main(int argc, char *argv[])
 		puts(argv[c]);
 		c++;
 	}
-	
+
 	return (0);
 }
