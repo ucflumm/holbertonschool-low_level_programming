@@ -9,7 +9,29 @@
 
 int main(int argc, char *argv[])
 {
-	puts(argv[(argc - 1)]);
+	int c, result;
+	
+	c = 1;
+	result = 0;
+	if (argc == 1)
+	{
+		puts("0");
+		return (0);
+	}
 
+	while (c <= argc)
+	{
+		
+		if (!isdigit(**argv))
+		{
+			puts("Error");
+			return (1);
+		}
+		result += atoi(*argv[c]);
+		c++;
+		argv++;
+		
+	}
+	printf("%d\n", result);
 	return (0);
 }
