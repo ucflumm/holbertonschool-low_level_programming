@@ -19,17 +19,15 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while (c <= argc)
+	while (c != argc)
 	{
-		
-		if (!isdigit(**argv))
+		if (!isdigit(*argv[c]))
 		{
 			puts("Error");
 			return (1);
 		}
-		result += atoi(*argv[c]);
+		result += _atoi(argv[c]);
 		c++;
-		argv++;
 		
 	}
 	printf("%d\n", result);

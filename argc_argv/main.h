@@ -6,5 +6,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+int _atoi(char *s);
 
 #endif
