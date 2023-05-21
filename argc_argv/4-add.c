@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			puts("Error");
 			return (1);
 		}
-		result += _atoi(argv[c]);
+		result += atoi(argv[c]);
 		c++;
 		
 	}
