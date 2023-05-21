@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int c, result;
-	
+
 	c = 1;
 	result = 0;
 	if (argc == 1)
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			puts("Error");
 			return (1);
 		}
-		else 
+		else
 		if (argv[c][1] != '\0' && !isdigit(argv[c][1]))
 		{
 			puts("Error");
@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
 		}
 		result += atoi(argv[c]);
 		c++;
-		
 	}
 	printf("%d\n", result);
 	return (0);
