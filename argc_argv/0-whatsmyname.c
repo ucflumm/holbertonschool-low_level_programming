@@ -4,7 +4,7 @@
  * main - main of whatsmyname
  * @argc: number of args
  * @argv: vector
- * Return: 0 for success 
+ * Return: 0 for success
 */
 
 int main(int argc, char *argv[])
