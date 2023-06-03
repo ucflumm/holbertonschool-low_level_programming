@@ -11,6 +11,8 @@ char *_strdup(char *str)
 	size_t len;
 	char *copy;
 
+	if (str == NULL)
+		return (NULL);
 	len = _strlen(str) + 1;
 	if (!(copy = malloc((int)len)))
 		return (NULL);
