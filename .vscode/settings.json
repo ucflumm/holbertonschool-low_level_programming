@@ -2,6 +2,7 @@
 	"files.associations": {
 		"main.h": "c",
 		"string.h": "c",
-		"ctype.h": "c"
+		"ctype.h": "c",
+		"stdlib.h": "c"
 	}
 }

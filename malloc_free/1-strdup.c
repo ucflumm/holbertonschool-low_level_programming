@@ -8,5 +8,12 @@
 
 char *_strdup(char *str)
 {
+	size_t len;
+	char *copy;
 
+	len = _strlen(str) + 1;
+	if (!(copy = malloc((int)len)))
+		return (NULL);
+	_memcpy(copy, str, len);
+	return (copy);
 }

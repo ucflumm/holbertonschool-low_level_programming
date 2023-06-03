@@ -1,7 +1,10 @@
 #ifndef MAIN_HEADER
 #define MAIN_HEADER
 #include <stdlib.h>
+#include <stdio.h>
 
+int _strlen(char *s);
+char *_memcpy(char *dest, char *src, unsigned int n);
 char *create_array(unsigned int size, char c);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
