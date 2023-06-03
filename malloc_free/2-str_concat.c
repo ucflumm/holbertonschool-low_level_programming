@@ -34,7 +34,6 @@ char *str_concat(char *s1, char *s2)
 	do
 	{
 		concat[firstcount] = s2[counter];
-		printf("fc is %d after process concat is %c and s2 is %c\n", firstcount, concat[firstcount], s2[counter]);
 		counter++;
 		firstcount++;
 	} while (firstcount < len);
