@@ -14,36 +14,35 @@ char *str_concat(char *s1, char *s2)
 	int counter = 0;
 	int firstcount;
 	char nullreplace = '\0';
-	
+
 	if (s1 == NULL)
 		s1 = &nullreplace;
 	if (s2 == NULL)
-		s2 = &nullreplace; 
+		s2 = &nullreplace;
 	len = _strlen(s1);
 	len += _strlen(s2);
 	len++;
-	
+
 
 	concat = malloc(sizeof(char) * len);
 	if (concat == NULL)
 		return (NULL);
-	
+
 	while (counter < _strlen(s1))
 	{
 		concat[counter] = s1[counter];
-		counter ++;
+		counter++;
 	}
 
 	firstcount = counter;
 	counter = 0;
-	do
-	{
+	do {
 		concat[firstcount] = s2[counter];
 		counter++;
 		firstcount++;
 	} while (firstcount < len);
 	return (concat);
-	
+
 }
 
 /**
