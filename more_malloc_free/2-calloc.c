@@ -4,7 +4,7 @@
  * _calloc - something the function
  * @nmemb: something the doing
  * @size: something the doing
- * 
+ * Return: pointer
 */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -12,11 +12,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *ptr;
 
 	if (nmemb <= 0 || size <= 0)
-		return (NULL);  
-	ptr = malloc (nmemb * size);
+		return (NULL);
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
-	beezero (ptr, nmemb * size);
+	beezero(ptr, nmemb * size);
 	return (ptr);
 
 }
@@ -24,13 +24,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 /**
  * beezero - something the function
  * @s: void pointer
- * @size: size to delete
- * 
+ * @len: size to delete
+ *
 */
 
 void beezero(void *s, size_t len)
 {
-	_memset (s, '\0', len);
+	_memset(s, '\0', len);
 }
 
 #include "main.h"
