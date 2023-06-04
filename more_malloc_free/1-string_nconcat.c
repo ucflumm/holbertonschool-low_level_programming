@@ -29,11 +29,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
+	
 	if (*s1 == '\0'  && *s2 == '\0')
 	{
 		*ptr = '\0';
 		return (ptr);
 	}
+	
+	if (*s1 == '\0' && n == 0)
+	{
+		*ptr = '\0';
+	}
+	
 	while (counter < _strlen(s1))
 	{
 		ptr[counter] = s1[counter];
