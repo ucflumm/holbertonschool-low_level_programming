@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		/* printf("s2 is %c\n", s2[counter]); */
 		counter++;
 		counter2++;
-	} while (counter2 < len);
+	} while (counter < (len - _strlen(s1)));
 
 	ptr[counter2] = '\0';
 	return (ptr);
