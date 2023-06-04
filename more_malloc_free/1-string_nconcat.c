@@ -11,21 +11,11 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int counter, counter2, len;
-	int nosign = n;
-	char nullreplace = '\0';
-
-	counter, counter2, len = 0;
-	if (s1 == NULL)
-		s1 = &nullreplace;
-	if (s2 == NULL)
-		s2 = &nullreplace;
-	if (_strlen(s2) < nosign)
-		len = _strlen(s2) + _strlen(s1);
-	else if (*s1 == '\0' && n == 0)
-		len = 0;
-	else
-		len = _strlen(s1) + n;
+	int counter = 0;
+	int counter2 = 0;
+	int len = 0;
+	
+	len = arg_check(s1, s2, n);
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
@@ -95,3 +85,21 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  *  @s: pointer to string
  *  Return: the size of the string
 **/
+
+int arg_check(char *s1, char *s2, int n)
+{
+	char nullreplace = '\0';
+	int len;
+
+	if (s1 == NULL)
+		s1 = &nullreplace;
+	if (s2 == NULL)
+		s2 = &nullreplace;
+	if (_strlen(s2) < n)
+		len = _strlen(s2) + _strlen(s1);
+	else if (*s1 == '\0' && n == 0)
+		len = 0;
+	else
+		len = _strlen(s1) + n;
+	return (len);
+}
