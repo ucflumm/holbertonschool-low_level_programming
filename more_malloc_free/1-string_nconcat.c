@@ -44,13 +44,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (ptr);
 	}
 	
-	if (*s2 == '\0' && n == 0)
-	{
-		ptr[counter] = '\0';
-		return (ptr);
-	}
-	
-	while (counter < _strlen(s1) && *s1 != '\0')
+	/**if (*s2 == '\0' && n == 0)
+	*{
+	*	ptr[counter] = '\0';
+	*	return (ptr);
+	*}
+	*/
+	while (counter < _strlen(s1))
 	{
 		ptr[counter] = s1[counter];
 		/* printf("s1 is %c\n", s1[counter]); */
