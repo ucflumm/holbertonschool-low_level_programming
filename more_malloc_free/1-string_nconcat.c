@@ -17,7 +17,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char nullreplace = '\0';
 	int nsigned = n;
 	
-
 	if (s1 == NULL)
 		s1 = &nullreplace;
 	if (s2 == NULL)
@@ -31,7 +30,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
-	
 	if (*s1 == '\0'  && *s2 == '\0')
 	{
 		*ptr = '\0';
@@ -43,29 +41,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*ptr = '\0';
 		return (ptr);
 	}
-	
-	/**if (*s2 == '\0' && n == 0)
-	*{
-	*	ptr[counter] = '\0';
-	*	return (ptr);
-	*}
-	*/
 	while (counter < _strlen(s1))
 	{
 		ptr[counter] = s1[counter];
-		/* printf("s1 is %c\n", s1[counter]); */
 		counter++;
 	}
-
 	counter2 = counter;
 	counter = 0;
 	do {
 		ptr[counter2] = s2[counter];
-		/* printf("s2 is %c\n", s2[counter]); */
 		counter++;
 		counter2++;
 	} while (counter < (len - _strlen(s1)));
-
 	if (*s2 != '\0') 
 		ptr[counter2] = '\0';
 	return (ptr);
