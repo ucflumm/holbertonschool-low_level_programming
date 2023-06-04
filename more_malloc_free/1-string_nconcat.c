@@ -48,6 +48,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		counter++;
 	}
 
+	if (*s2 == '\0')
+		ptr[counter] = '\0';
+		return (ptr);
+
 	counter2 = counter;
 	counter = 0;
 	do {
