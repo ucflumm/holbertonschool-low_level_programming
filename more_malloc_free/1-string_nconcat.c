@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (counter < _strlen(s1))
 	{
 		ptr[counter] = s1[counter];
-		printf("s1 is %c\n", s1[counter]);
+		/* printf("s1 is %c\n", s1[counter]); */
 		counter++;
 	}
 
@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	counter = 0;
 	do {
 		ptr[counter2] = s2[counter];
-		printf("s2 is %c\n", s2[counter]);
+		/* printf("s2 is %c\n", s2[counter]); */
 		counter++;
 		counter2++;
 	} while (counter2 < len);
