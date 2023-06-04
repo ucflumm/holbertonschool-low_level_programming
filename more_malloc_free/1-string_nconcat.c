@@ -21,7 +21,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = &empty;
 	
-	ptr = malloc_checked(sizeof(char) * (_strlen(s1) + len + 1));
+	ptr = malloc(sizeof(char) * (_strlen(s1) + len + 1));
+	if (ptr == NULL)
+		return (NULL);
 	_memset(ptr, '\0', (sizeof(char) * (_strlen(s1) + len + 1)));
 	if (arg_check(s1, s2, ptr, n))
 		return (ptr);
@@ -128,19 +130,3 @@ char *_memset(char *s, char b, unsigned int n)
 	return (s);
 }
 
-#include "main.h"
-
-/**
- * malloc_checked - allocates memory
- * @b: memory to allocate
- * Return: void pointer
-*/
-
-void *malloc_checked(unsigned int b)
-{
-	void *ptr = malloc(b);
-
-	if (ptr == NULL)
-		exit(98);
-	return (ptr);
-}
