@@ -11,7 +11,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr, *ptr1;
-	/* int counter = 0; */
+	int counter = 0;
+	int i;
 	int len = n;
 	char empty = '\0';
 
@@ -20,19 +21,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = &empty;
 	
-	ptr = malloc_checked(sizeof(char) * (len + 1));
-	_memset(ptr, '\0', (sizeof(char) * (len + 1)));
+	ptr = malloc_checked(sizeof(char) * (_strlen(s1) + len + 1));
+	_memset(ptr, '\0', (sizeof(char) * (_strlen(s1) + len + 1)));
 	if (arg_check(s1, s2, ptr, n))
-	{
-		puts("condition ran true!");
 		return (ptr);
-	}
 
 	_memcpy(ptr, s1, _strlen(s1));
 	ptr1 = &*ptr;
 	while (*ptr != '\0')
+	{
 		ptr++;
-	_memcpy(ptr, s2, (n + 1));
+		counter++;
+	}
+	for (i = 0; i < len; i++)
+	{
+		*ptr = s2[i];
+		ptr++;
+	}
+	*ptr = '\0';
 	return (ptr1);
 	
 }
