@@ -12,8 +12,11 @@ int **alloc_grid(int width, int height)
 	int **arr = malloc(height * sizeof(int *));
 	
 	if (arr == NULL)
+	{
+		printf("Malloc FAILED!\n");
+		free(arr);
 		return (NULL);
-	
+	}
 	for(i = 0; i < height; i++)
 	{ 
 		arr[i] = malloc(width * sizeof(int));
@@ -26,12 +29,7 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 	{
 		printf("Width or height is less than 1\n");
-		return (NULL);
-	}
-	
-	if (arr == NULL)
-	{
-		printf("Malloc Fail\n");
+		free(arr);
 		return (NULL);
 	}
 
