@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = &empty;
 	if (s2 == NULL)
 		s2 = &empty;
-	
+
 	ptr = malloc(sizeof(char) * (_strlen(s1) + len + 1));
 	if (ptr == NULL)
 		return (NULL);
@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	*ptr = '\0';
 	return (ptr1);
-	
+
 }
 
 /**
@@ -83,10 +83,11 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 }
 
 /**
- * _memcpy - copies memory area
- * @dest: destination pointer
- * @src: source pointer
- * @n: number of bytes
+ * arg_check - copies memory area
+ * @s1: destination pointer
+ * @s2: source pointer
+ * @s3: number of bytes
+ * @n: string
  * Return: destination pointer
  *
 */
@@ -101,13 +102,12 @@ int arg_check(char *s1, char *s2, char *s3, unsigned int n)
 	if (*s1 == '\0' && n == 0)
 	{
 		*s3 = '\0';
-		return(1);
+		return (1);
 	}
 	else
 		return (0);
 }
 
-#include "main.h"
 
 /**
  * _memset - fills memory with a constant byte.
