@@ -21,13 +21,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = &empty;
 	
 	ptr = malloc_checked(sizeof(char) * (len + 1));
+	_memset(ptr, '\0', (sizeof(char) * (len + 1)));
 	if (arg_check(s1, s2, ptr, n))
 	{
 		puts("condition ran true!");
 		return (ptr);
 	}
 
-	_memcpy(ptr, s1, (_strlen(s1) + 1));
+	_memcpy(ptr, s1, _strlen(s1));
 	ptr1 = &*ptr;
 	while (*ptr != '\0')
 		ptr++;
@@ -96,4 +97,27 @@ int arg_check(char *s1, char *s2, char *s3, unsigned int n)
 	}
 	else
 		return (0);
+}
+
+#include "main.h"
+
+/**
+ * _memset - fills memory with a constant byte.
+ * @s: pointer to area
+ * @b: byte to be filled
+ * @n: number of bytes
+ * Return: pointer to destination
+*/
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *ptr;
+
+	ptr = s;
+	while (n-- > 0)
+	{
+		*ptr = b;
+		ptr++;
+	}
+	return (s);
 }
