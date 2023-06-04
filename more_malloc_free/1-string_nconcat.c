@@ -11,10 +11,12 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int counter, counter2;
+	int counter = 0;
+	int counter2 = 0;
 	int len = 0;
 	char nullreplace = '\0';
 	int nsigned = n;
+	
 
 	if (s1 == NULL)
 		s1 = &nullreplace;
