@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * alloc_grid - something it does
- * @width: something to point
- * @height: another argument
+ * alloc_grid - allocates space for 2d array
+ * @width: width of array
+ * @height: height of array
+ * Return: pointer to array
 */
 
 int **alloc_grid(int width, int height)
