@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+void beezero(void *s, size_t len);
+char *_memset(char *s, char b, unsigned int n);
 int _strlen(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *create_array(unsigned int size, char c);
