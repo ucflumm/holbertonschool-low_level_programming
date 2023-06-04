@@ -33,7 +33,6 @@ int **alloc_grid(int width, int height)
 	}
 	if (width <= 0 || height <= 0)
 	{
-		printf("Width or height is less than 1\n");
 		free(arr);
 		return (NULL);
 	}
