@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = &nullreplace;
 	if (s2 == NULL)
 		s2 = &nullreplace;
-	if (_strlen(s2) <= nsigned)
+	if (_strlen(s2) < nsigned)
 		len = _strlen(s2) + _strlen(s1);
 	else
 		len = _strlen(s1) + n;
