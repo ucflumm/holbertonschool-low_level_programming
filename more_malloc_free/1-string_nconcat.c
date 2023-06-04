@@ -24,6 +24,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = &nullreplace;
 	if (_strlen(s2) < nsigned)
 		len = _strlen(s2) + _strlen(s1);
+	else if (*s1 == '\0' && n == 0)
+		len = 0;
 	else
 		len = _strlen(s1) + n;
 	ptr = malloc(sizeof(char) * (len + 1));
@@ -39,20 +41,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (*s1 == '\0' && n == 0)
 	{
 		*ptr = '\0';
+		return (ptr);
 	}
 	
-	while (counter < _strlen(s1))
+	if (*s2 == '\0' && n == 0)
+	{
+		ptr[counter] = '\0';
+		return (ptr);
+	}
+	
+	while (counter < _strlen(s1) && *s1 != '\0')
 	{
 		ptr[counter] = s1[counter];
 		/* printf("s1 is %c\n", s1[counter]); */
 		counter++;
 	}
 
-	if (*s2 == '\0')
-	{
-		ptr[counter] = '\0';
-		return (ptr);
-	}
 	counter2 = counter;
 	counter = 0;
 	do {
