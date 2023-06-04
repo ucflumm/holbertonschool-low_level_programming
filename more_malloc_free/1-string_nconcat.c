@@ -11,12 +11,9 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int counter = 0;
-	int counter2 = 0;
-	int len = 0;
+	int counter = 0, counter2 = 0, len = 0, nsigned = n;;
 	char nullreplace = '\0';
-	int nsigned = n;
-	
+
 	if (s1 == NULL)
 		s1 = &nullreplace;
 	if (s2 == NULL)
@@ -35,17 +32,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*ptr = '\0';
 		return (ptr);
 	}
-	
 	if (*s1 == '\0' && n == 0)
 	{
 		*ptr = '\0';
 		return (ptr);
 	}
-	while (counter < _strlen(s1))
-	{
+	for (counter = 0; counter < _strlen(s1); counter++)
 		ptr[counter] = s1[counter];
-		counter++;
-	}
 	counter2 = counter;
 	counter = 0;
 	do {
@@ -56,7 +49,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (*s2 != '\0') 
 		ptr[counter2] = '\0';
 	return (ptr);
-	
 }
 
 /**
@@ -95,3 +87,9 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		*d++ = *s++;
 	return (dest);
 }
+
+/**
+ *  arg_check - finds the length of a string
+ *  @s: pointer to string
+ *  Return: the size of the string
+**/
