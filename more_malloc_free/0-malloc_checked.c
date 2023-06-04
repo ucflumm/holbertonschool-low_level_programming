@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * malloc_checked - allocates space for 2d array
- * @b: no idea what this does?
- * 
+ * malloc_checked - allocates memory
+ * @b: memory to allocate
+ * Return: void pointer
 */
 
 void *malloc_checked(unsigned int b)
