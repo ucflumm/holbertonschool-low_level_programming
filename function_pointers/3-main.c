@@ -1,11 +1,24 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "3-calc.h"
 
 /**
- * main - does something?
+ * main - Entry point
+ * 
  * Return: 0 if successful, 1 for error
  */
-int main(void)
+int main(int argc, char *argv[])
 {
+	if (argc != 4)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	
+	if (get_op_func(argv[2]) == NULL)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }

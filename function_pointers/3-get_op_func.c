@@ -1,11 +1,27 @@
-#include <stdlib.h>
-#include <stdio.h>
-
+#include "3-calc.h"
 /**
- * main - does something?
+ * get_op_func - a function that selects the correct function to perform
+ * @s: the operator passed as argument to the program
  * Return: 0 if successful, 1 for error
  */
-int main(void)
+int (*get_op_func(char *s))(int, int)
 {
-	return (0);
+	int i = 0;
+
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{"NULL", NULL}
+	};
+
+	while (ops[i].op != NULL)
+	{
+		if (ops[i].op == s)
+			return (ops[i].f);
+		i++;
+	}
+	return (NULL);
 }

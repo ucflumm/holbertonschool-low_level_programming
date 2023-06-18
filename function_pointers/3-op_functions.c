@@ -1,11 +1,56 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "3-calc.h"
 
 /**
- * main - does something?
- * Return: 0 if successful, 1 for error
+ * op_add - a function that adds two integers
+ * Return: a + b
  */
-int main(void)
+int op_add(int a, int b)
 {
-	return (0);
+	return (a + b);
+}
+
+/**
+ * op_sub - a function that subtracts two integers
+ * Return: a - b
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - a function that multiplies two integers
+ * Return: a * b
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - a function that divides two integers
+ * Return: a / b
+ */
+int op_div(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		return(0);
+	}
+	return (a / b);
+}
+
+/**
+ * op_mod - a function that returns the remainder of two integers
+ * Return: a % b
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		return(0);
+	}
+	return (a % b);
 }
