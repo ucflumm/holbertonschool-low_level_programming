@@ -13,15 +13,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doge;
 	
-	doge = malloc(sizeof(struct dog));
-	if (doge == NULL)
+	if (NULL == (doge = malloc(sizeof(struct dog))))
 	{
 		perror("No memory");
 		freestruct(doge);
 		return (NULL);
 	}
-	doge->name = malloc(strlen(name) + 1);
-	if (doge->name == NULL)
+	if (NULL == (doge->name = malloc(strlen(name) + 1)))
 	{
 		perror("No memory");
 		freestruct(doge);
@@ -29,9 +27,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	memcpy(doge->name, name, strlen(name) + 1);
-
-	doge->owner = malloc(strlen(owner) + 1);
-	if (doge->owner == NULL)
+	if (NULL == (doge->owner = malloc(strlen(owner) + 1)))
 	{
 		perror("No memory");
 		freestruct(doge);
@@ -44,7 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	
 }
 
-void freestruct(dog_t *doge)
+void freestruct(dog_t *doge, int c)
 {
 	free(doge->owner);
 	free(doge->name);
