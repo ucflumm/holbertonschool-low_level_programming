@@ -30,8 +30,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		freestruct(doge);
 		return (NULL);
 	}
-	strcpy(doge->name, name);
-	strcpy(doge->owner, owner);
+	doge->name = &name;
+	doge->owner = &owner;
 	doge->age = age;
 
 	return (doge);
