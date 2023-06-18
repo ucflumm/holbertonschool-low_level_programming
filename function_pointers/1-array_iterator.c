@@ -2,10 +2,19 @@
 #include <stdio.h>
 
 /**
- * main - does something?
+ * array_iterator - exec function on each element of array
  * Return: 0 if successful, 1 for error
  */
-int main(void)
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	return (0);
+	int counter = 0;
+	int safe_size = size;
+	
+	while (counter < safe_size)
+	{
+		action(*array);
+		array++;
+		counter++;
+	}
+	
 }
