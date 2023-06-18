@@ -12,7 +12,6 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doge;
-	printf("%s\n", name);
 	doge = malloc(sizeof(struct dog));
 	if (doge == NULL)
 	{
@@ -34,8 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	strcpy(doge->name, name);
 	strcpy(doge->owner, owner);
 	doge->age = age;
-	printf("%s\n", doge->name);
-	printf("%s\n", doge->owner);
+
 	return (doge);
 	
 }
