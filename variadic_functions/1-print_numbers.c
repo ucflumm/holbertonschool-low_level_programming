@@ -1,8 +1,10 @@
 #include "variadic_functions.h"
 
 /**
- * main - does something?
- * Return: 0 if successful, 1 for error
+ * print_numbers - does something?
+ * @separator: argument separator
+ * @n: argc counter
+ * Return: only if error
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
