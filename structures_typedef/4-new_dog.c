@@ -11,9 +11,9 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doge;
+	dog_t *doge = malloc(sizeof(struct dog));
 	
-	if (NULL == (doge = malloc(sizeof(struct dog))))
+	if (doge == NULL)
 	{
 		perror("No memory");
 		freestruct(doge);
@@ -40,7 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	
 }
 
-void freestruct(dog_t *doge, int c)
+void freestruct(dog_t *doge)
 {
 	free(doge->owner);
 	free(doge->name);
