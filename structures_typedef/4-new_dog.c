@@ -18,13 +18,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		freestruct(doge);
 		return (NULL);
 	}
-	doge->name = malloc(strlen(name));
+	doge->name = malloc(strlen(name) + 1);
 	if (doge->name == NULL)
 	{
 		freestruct(doge);
 		return (NULL);
 	}
-	doge->owner = malloc(strlen(owner));
+	doge->owner = malloc(strlen(owner) + 1);
 	if (doge->owner == NULL)
 	{
 		freestruct(doge);
