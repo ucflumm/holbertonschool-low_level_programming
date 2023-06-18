@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include "function_pointers.h"
 /**
- * main - does something?
- * Return: 0 if successful, 1 for error
+ * print_name - does something?
+ * @name: pointer to name
+ * @f: function passed through
  */
 void print_name(char *name, void (*f)(char *))
 {
