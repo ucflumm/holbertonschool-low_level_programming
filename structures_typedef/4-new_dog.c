@@ -12,6 +12,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doge;
+	
 	doge = malloc(sizeof(struct dog));
 	if (doge == NULL)
 	{
@@ -24,14 +25,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 		freestruct(doge);
 		return (NULL);
 	}
+
+	memcpy(doge->name, name, strlen(name) + 1);
+
 	doge->owner = malloc(strlen(owner) + 1);
 	if (doge->owner == NULL)
 	{
 		freestruct(doge);
 		return (NULL);
 	}
-	doge->name = &name;
-	doge->owner = &owner;
+	memcpy(doge->owner, owner, strlen(owner) + 1);
 	doge->age = age;
 
 	return (doge);
