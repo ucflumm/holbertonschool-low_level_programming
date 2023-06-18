@@ -23,7 +23,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 			return (counter);
 		array++;
 	}
-	
+
 	/** No match return -1 */
 	return (-1);
 
