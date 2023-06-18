@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "dog.h"
 /**
  * new_dog - does something?
@@ -11,15 +12,16 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doge;
-	char *name_cpy, *owner_cpy;
-	
-	name_cpy = name;
-	owner_cpy = owner;
+
 	doge = malloc(sizeof(struct dog));
 	if (doge == NULL)
 		return (NULL);
-	doge->name = name_cpy;
+
+	doge->name = malloc(sizeof(*name));
+
+	doge->owner = malloc(sizeof(*owner));
+	strcpy(doge->name, name);
+	strcpy(doge->owner, owner);
 	doge->age = age;
-	doge->owner = owner_cpy;
 	return (doge);
 }
