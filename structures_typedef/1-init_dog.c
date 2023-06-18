@@ -3,8 +3,11 @@
 #include "dog.h"
 
 /**
- * main - does something?
- * Return: 0 if successful, 1 for error
+ * init_dog - does something?
+ * @d: pointer to struct
+ * @name: pointer to name
+ * @age: age
+ * @owner: pointer to owner
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
