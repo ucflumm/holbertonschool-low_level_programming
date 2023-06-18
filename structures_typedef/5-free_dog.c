@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "dog.h"
 /**
- * new_dog - does something?
- * Return: malloc error
+ * free_dog - does something?
+ * d: malloc error
  */
 void free_dog(dog_t *d)
 {
