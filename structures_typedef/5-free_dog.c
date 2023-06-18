@@ -3,11 +3,11 @@
 #include "dog.h"
 /**
  * free_dog - does something?
- * d: malloc error
+ * @d: malloc error
  */
 void free_dog(dog_t *d)
 {
-	if(d != NULL)
+	if (d != NULL)
 	{
 		free(d->owner);
 		free(d->name);
