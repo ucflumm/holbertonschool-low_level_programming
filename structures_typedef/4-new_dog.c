@@ -17,12 +17,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		perror("No memory");
 		freestruct(doge);
+		exit(1);
 		return (NULL);
 	}
 	if (NULL == (doge->name = malloc(strlen(name) + 1)))
 	{
 		perror("No memory");
 		freestruct(doge);
+		exit(1);
 		return (NULL);
 	}
 
@@ -31,6 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		perror("No memory");
 		freestruct(doge);
+		exit(1);
 		return (NULL);
 	}
 	memcpy(doge->owner, owner, strlen(owner) + 1);
