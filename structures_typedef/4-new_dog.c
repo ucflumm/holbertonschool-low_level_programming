@@ -16,14 +16,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doge == NULL)
 	{
 		perror("No memory");
-		freestruct(doge);
+		free(doge);
 		exit(1);
 		return (NULL);
 	}
 	if (NULL == (doge->name = malloc(strlen(name) + 1)))
 	{
 		perror("No memory");
-		freestruct(doge);
+		free(doge->name);
+		free(doge);
 		exit(1);
 		return (NULL);
 	}
@@ -32,7 +33,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (NULL == (doge->owner = malloc(strlen(owner) + 1)))
 	{
 		perror("No memory");
-		freestruct(doge);
+		free(doge->owner);
+		free(doge->name);
+		free(doge);
 		exit(1);
 		return (NULL);
 	}
@@ -43,9 +46,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 	
 }
 
-void freestruct(dog_t *doge)
-{
-	free(doge->owner);
-	free(doge->name);
-	free(doge);
-}
