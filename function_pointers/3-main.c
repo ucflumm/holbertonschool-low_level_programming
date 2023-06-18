@@ -7,6 +7,8 @@
  */
 int main(int argc, char *argv[])
 {
+	printf("%d\n", argc);
+	printf("%s\n", argv[2]);
 	if (argc != 4)
 	{
 		printf("Error\n");
