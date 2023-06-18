@@ -3,6 +3,8 @@
 		"main.h": "c",
 		"string.h": "c",
 		"ctype.h": "c",
-		"stdlib.h": "c"
+		"stdlib.h": "c",
+		"function_pointers.h": "c",
+		"stdio.h": "c"
 	}
 }
