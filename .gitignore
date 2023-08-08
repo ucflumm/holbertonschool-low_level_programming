@@ -3,6 +3,8 @@ function_pointers/test_calc
 function_pointers/calculator_test
 *.out
 .vscode/tasks.json
-.vscode/tasks.json
+.vscode/settings.json
+.vscode/launch.json
 ./vscode/
+*.json
 CMakeLists.txt
