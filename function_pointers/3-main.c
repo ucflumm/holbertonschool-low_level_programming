@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error arg does not  = 4\n");
-		return (1);
+		printf("Error\n");
+		exit (98);
 	}
 	
 	if (argv[2] == NULL)
@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 	
 	if (argv[2][1] != '\0')
 	{
-		printf("Error argv[2][1] != NULL\n");
-		return (1);
+		printf("Error\n");
+		exit(99);
 	}
 	
 	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
