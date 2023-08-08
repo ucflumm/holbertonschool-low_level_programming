@@ -2,3 +2,4 @@ functions_nested_loops/main.h
 function_pointers/test_calc
 function_pointers/calculator_test
 *.out
+.vscode/tasks.json
