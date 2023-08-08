@@ -4,3 +4,5 @@ function_pointers/calculator_test
 *.out
 .vscode/tasks.json
 .vscode/tasks.json
+./vscode/
+CMakeLists.txt
