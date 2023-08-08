@@ -10,3 +10,5 @@ all = $(TARGET)
 $(TARGET): $(OBJFILES)
 	$(CC) $(CFLAGS) -o $(TARGET) $(CFILES) $(LDFLAGS)
 
+clean:
+	rm -f $(TARGET)

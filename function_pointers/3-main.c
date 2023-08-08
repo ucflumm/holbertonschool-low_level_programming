@@ -8,19 +8,21 @@
 int main(int argc, char *argv[])
 {
 	printf("%d\n", argc);
-	printf("%s\n", argv[2]);
+	printf("arg 2 = %s\n", argv[2]);
+	printf("arg 1 = %s\n", argv[1]);
+	printf("arg 3 = %s\n", argv[3]);
 	if (argc != 4)
 	{
-		printf("Error\n");
+		printf("Error arg does not  = 4\n");
 		return (1);
 	}
 	
-	if (get_op_func(argv[2]) == NULL)
+	if (argv[2] == NULL)
 	{
-		printf("Error\n");
+		printf("Error argv[2] = NULL\n");
 		return (1);
 	}
 
-	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", (get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]))));
 	return (0);
 }
