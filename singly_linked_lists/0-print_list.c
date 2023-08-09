@@ -19,14 +19,14 @@ size_t print_list(const list_t *h)
     
     current = (*h).next;
     if (h->str != NULL)
-        printf("[%d] %s\n", h->len, h->str);
+        printf("[%d] %.*s\n", h->len, h->len, h->str);
     else
         printf("[0] (nil)\n");
     count++;
 
     
     do {
-        printf("[%d] %s!\n", current->len, current->str);
+        printf("[%d] %.*s!\n", current->len, current->len, current->str);
         count++;
         if (current->next == NULL)
             return count;
