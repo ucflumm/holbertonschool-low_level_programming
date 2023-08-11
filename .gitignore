@@ -17,3 +17,4 @@ singly_linked_lists/test.exe
 *.o
 singly_linked_lists/school
 .vscode/settings.json
+singly_linked_lists/.vscode/*
