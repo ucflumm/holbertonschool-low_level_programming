@@ -12,3 +12,4 @@ CMakeLists.txt
 singly_linked_lists/test
 singly_linked_lists/test.exe
 .gitignore
+.vscode/tasks.json
