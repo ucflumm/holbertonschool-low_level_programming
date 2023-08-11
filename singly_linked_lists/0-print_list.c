@@ -31,6 +31,8 @@ size_t print_list(const list_t *h)
 		printf("[%d] %s\n", h->len, safeString);
 		free(safeString);
 		count++;
+		if (h->next == NULL)
+			return (count);
 	}
 
 	while (current != NULL)
