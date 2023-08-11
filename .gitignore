@@ -9,3 +9,6 @@ function_pointers/calculator_test
 *.json
 CMakeLists.txt
 .vscode/settings.json
+singly_linked_lists/test
+singly_linked_lists/test.exe
+.gitignore
