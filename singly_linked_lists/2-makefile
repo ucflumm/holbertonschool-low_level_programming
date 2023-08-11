@@ -1,0 +1,34 @@
+CC=gcc
+OPT=-O0
+CFLAGS=-Wall -Wextra 
+RM=rm
+RMF=-rf
+SRC=2-main.c 2-add_node.c 0-print_list.c
+OBJ=$(patsubst %.c,%.o,$(SRC))
+
+NAME=test
+BINARY=$(NAME)
+
+all: $(BINARY)
+
+$(BINARY): $(OBJ)
+	$(CC) -o $@ $^
+
+# regular expression where % is a wildcard
+%.o:%.c
+	$(CC) $(CFLAGS) -c -o $@ $^
+
+.PHONY: fclean
+fclean:
+	$(RM) $(RMF) $(BINARY) $(OBJ) *~  
+.PHONY: oclean
+oclean:
+	$(RM) $(RMF) $(OBJ)
+.PHONY: clean
+clean:
+	$(RM) $(RMF) *~ $(BINARY)
+
+.PHONY: re
+re:
+	$(MAKE) -f 3-Makefile fclean
+	$(MAKE) -f 3-Makefile all
