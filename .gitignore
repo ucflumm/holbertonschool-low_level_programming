@@ -8,3 +8,4 @@ function_pointers/calculator_test
 ./vscode/
 *.json
 CMakeLists.txt
+.vscode/settings.json
