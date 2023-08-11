@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"command": "gcc",
+			"args": [
+				"-Wall",
+				"-Werror",
+				"-pedantic",
+				"-std=gnu89",
+				"-ggdb",
+				"./singly_linked_lists/1-main.c",
+				"./singly_linked_lists/1-list_len.c",
+				"-o",
+				"test"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
