@@ -18,6 +18,8 @@ size_t print_list(const list_t *h)
 	list_t *current;
 	char *safeString = NULL;
 
+	if (h == NULL)
+		return (count);
 	current = h->next;
 	if (h->next == NULL)
 	{
