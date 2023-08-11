@@ -14,3 +14,6 @@ singly_linked_lists/test.exe
 .gitignore
 .vscode/tasks.json
 .gitignore
+*.o
+singly_linked_lists/school
+.vscode/settings.json
