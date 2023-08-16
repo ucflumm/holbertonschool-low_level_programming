@@ -11,6 +11,9 @@
 int main(void)
 {
     list_t *head;
+    #ifdef DEBUG
+    printf(("START OF main = memory addr of head: %p\n"), (void *) &head);
+    #endif
 
     head = NULL;
     add_node(&head, "Alexandro");
