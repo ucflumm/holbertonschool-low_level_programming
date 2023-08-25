@@ -14,6 +14,8 @@ int main(void)
 
     head = NULL;
     add_node_end(&head, "Anne");
+    printf(("START OF main = memory addr of head: %p\n"), (void *) head);
+    printf("head->str: %s\n", head->str);
     add_node_end(&head, "Colton");
     add_node_end(&head, "Corbin");
     add_node_end(&head, "Daniel");
