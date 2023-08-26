@@ -1,5 +1,30 @@
 #include "lists.h"
 /**
+ * listint_len - prints all the elements of a listint_t list
+ * @h: pointer to head of list
+ * Return: number of nodes
+ */
+
+size_t listint_len(const listint_t *h)
+{
+	size_t count = 0;
+	listint_t *current;
+
+	if (h == NULL)
+		return (count);
+
+	count++;
+	current = h->next;
+	while (current != NULL)
+	{
+		count++;
+		current = current->next;
+	}
+
+	return (count);
+}
+
+/**
  * insert_nodeint_at_index - inserts a new node at a given position
  * @head: pointer to the first node in the list
  * @idx: index of the list where the new node should be added
