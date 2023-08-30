@@ -13,15 +13,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t n_read, n_write;
 	char *buffer;
 
+	/* Sanity Checks for filename*/
 	if (filename == NULL)
 		return (0);
 
+	/* Open file */
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
 		return (0);
 	}
 
+	/* Allocate memory for buffer */
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 	{
@@ -29,6 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
+	/* Read file */
 	n_read = read(fd, buffer, letters);
 	if (n_read == -1)
 	{
@@ -37,6 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
+	/* Write to stdout */
 	n_write = write(STDOUT_FILENO, buffer, n_read);
 	if (n_write == -1)
 	{
