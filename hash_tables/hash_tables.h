@@ -1,5 +1,8 @@
-#ifndef "main_header"
-#define "main_header"
+#ifndef MAIN_HEADER
+#define MAIN_HEADER
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
