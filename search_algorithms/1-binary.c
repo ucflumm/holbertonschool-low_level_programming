@@ -1,6 +1,7 @@
 #include "search_algos.h"
 
 static int avg_ceil(int a, int b);
+static void print_array(int *array, size_t size);
 /**
 * binary_search - searches for a value in a sorted array of integers using
 * Binary search algorithm
@@ -21,6 +22,7 @@ int binary_search(int *array, size_t size, int value)
 
 	while (left != right)
 	{
+		print_array(array + left, right + 1 - left);
 		middle = avg_ceil(left, right);
 		if (array[middle] > value)
 			right = middle - 1;
@@ -49,4 +51,24 @@ static int avg_ceil(int a, int b)
 		result = result + 1;
 
 	return (result);
+}
+
+/**
+ * print_array - prints an array
+ * @array: pointer to array
+ * @size: size of array
+*/
+
+static void print_array(int *array, size_t size)
+{
+	size_t i;
+
+	printf("Searching in array: ");
+	for (i = 0; i < size; i++)
+	{
+		if (i != size - 1)
+			printf("%d, ", array[i]);
+		else
+			printf("%d\n", array[i]);
+	}
 }
